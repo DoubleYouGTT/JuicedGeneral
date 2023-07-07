@@ -90,7 +90,7 @@ makeconsistentdatetimeformat <- function(thedates,asstring=NULL,timezone="") {
                    "%d/%m/%YT%H.%M.%OS","%Y/%m/%dT%H.%M.%OS",
                    "%d-%m-%Y %H.%M.%OS","%Y-%m-%d %H.%M.%OS",
                    "%d.%m.%Y %H.%M.%OS","%Y.%m.%d %H.%M.%OS",
-                   "%d%m%yT%h%m%d")
+                   "%d%m%yT%h%m%d", "%Y%m%d%H%M%OS")
       #various formats to test (note: order is important as 30/06/2017 can become 0030/06/20 with %Y/%m/%d)
 
       thedates=gsub(":", ".", thedates)                                       #replace colons with dots (in case milliseconds is with :)

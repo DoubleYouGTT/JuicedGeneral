@@ -394,7 +394,7 @@ updatetablevalues <- function(datatable,from,to,columns=NULL) {
   }
 
   for (j in columns) {
-    set(datatable,NULL,j,mapvalues(datatable[[j]],from,to,warn_missing = FALSE))
+    set(datatable,NULL,j,plyr::mapvalues(datatable[[j]],from,to,warn_missing = FALSE))
   }
   invisible(datatable)
 }
