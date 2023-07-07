@@ -1,0 +1,27 @@
+Package: JuicedGeneral
+Title: General Juicy Functions
+Version: 0.7.2
+Date: 2023-07-07
+Authors@R: 
+    person("Joost", "Kuckartz", , "jkuckartz1984@hotmail.com", role = c("aut", "cph", "cre"))
+Description: These are some general useful functions that have not been
+    included at any other location. Quite varied from calculations to
+    plotting.
+License: MIT License
+Depends: 
+    data.table,
+    devtools,
+    haven,
+    plotly,
+    plyr,
+    R (>= 4.1.1),
+    readxl,
+    scales,
+    shiny,
+    stats,
+    stringr,
+    svDialogs
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
