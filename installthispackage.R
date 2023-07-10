@@ -1,12 +1,33 @@
 # Install the development package(s) found in this directory.
-# Joost Kuckartz, jkuckartz1984@gmail.com
-# modified: January 2021
-# version: 0.2
+
+# author: Joost Kuckartz, jkuckartz1984@hotmail.com
+# modified: July 2023
+# version: 1.0
 
 #########
 # USAGE #
 #########
-# 1. Source this file
+# Before using this file, it's recommended you update existing packages.
+#
+# Step 1. Place this file in the parent folder of an R package (a subfolder 'R'
+# and possibly 'man' exists), or place it in the folder named 'R' containing all
+# code of the package.
+#
+# Sample 1:
+# C:/
+# C:/code/              <-- place in this folder
+# C:/code/R/
+# C:/code/R/script1.R
+# C:/code/R/script2.R
+# 
+# Sample 1:
+# C:/
+# C:/code/
+# C:/code/R/            <-- place in this folder
+# C:/code/R/script1.R
+# C:/code/R/script2.R
+#
+# Step 2: Source this file
 
 rm(list=ls())                           #clear memory
 
@@ -33,11 +54,4 @@ if (basename(getwd())=="R") {                                #if this directory 
   }
 }
 
-
-#subdirs=list.dirs(getwd(),recursive=FALSE)                   #get all subdirectories
-#ignoredirs=substr(basename(subdirs),1,1)=="."                #certain directories need to be ignored (like .git dir)
-#subdirs=subdirs[!ignoredirs]
-#for (i in 1:length(subdirs)) {
-#  install(subdirs[i], local = TRUE, dependencies = TRUE, upgrade_dependencies = TRUE)  #each subdirectory is a package
-#}
-install(getwd(), local = TRUE, dependencies = TRUE, upgrade_dependencies = TRUE)  #this directory is the package
+install(getwd(), dependencies = TRUE, upgrade = "always")  #this directory is the package
